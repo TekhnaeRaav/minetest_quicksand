@@ -1,0 +1,2 @@
+# Quicksand
+A Minetest mod that adds quicksand, a thick flowing opaque liquid.
