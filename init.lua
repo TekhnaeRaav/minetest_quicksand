@@ -91,21 +91,10 @@ minetest.register_node("quicksand:quicksand_flowing", {
 	sounds = default.node_sound_water_defaults(),
 })
 
---Jungle Sand Pit
-minetest.register_decoration({
-	deco_type = "simple",
-	place_on = {"default:dirt_with_rainforest_litter"},
-	sidelen = 16,
-	noise_params = {
-		offset = -2,
-		scale = 5.0,
-		spread = {x = 50, y = 50, z = 50},
-		seed = 2,
-		octaves = 3,
-		persist = 0.66
-	},
-	biomes = {"rainforest"},
-	y_min = 1,
-	y_max = 31000,
-	decoration = "quicksand:quicksand_source",
-})
+bucket.register_liquid(
+	"quicksand:quicksand_source",
+	"quicksand:quicksand_flowing",
+	"quicksand:bucket_quicksand",
+	"bucket_quicksand.png",
+	"Quicksand Bucket"
+)
